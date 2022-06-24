@@ -13,6 +13,9 @@
                 const random = Math.floor(Math.random()*3);
                 return compChoice[random];
             }
+            function playerPlay(){
+                return prompt("Choose Rock, Paper, or Scissors", "").toLowerCase();
+            }
 
             function playRound(playerSelection,computerSelection){
 
@@ -33,10 +36,8 @@
                 }
             };
 
-            const p = "rock";
-            const c = "scissors";
 
-            console.log(playRound(p,c));
+console.log(playerPlay());
 
         </script>
     </body>    
