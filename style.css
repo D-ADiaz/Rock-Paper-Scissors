@@ -9,6 +9,7 @@
     width: 600px;
     align-items: center;
 }
+
 body{
     display: flex;
     justify-content: center;
@@ -30,27 +31,27 @@ button{
     box-shadow: 3px 3px 3px rgb(0, 0, 0);
     transition:all .05s;
 }
+
 #rock{
     background-color: #AFF8D8;
 }
+
 #paper{
     background-color: #ACE7FF;
 }
+
 #scissors{
     background-color: #FFABAB;
 }
 
 .abox{
-
 border: 10px;
 border-color: blue;
 border-width: 10px;
 background: green;
-
 }
+
 .clicked{
-transform:scale(1.1);
-border-color: #A7BED3
-
-
+transform:scale(1.2);
+border-color: #A7BED3;
 }

@@ -1,3 +1,4 @@
+/* button functionality */
 const rockBtn = document.querySelector("#rock");
 rockBtn.addEventListener("click",() => console.log(playRound("rock",computerPlay())));
 
@@ -7,11 +8,8 @@ paperBtn.addEventListener("click",() => console.log(playRound("paper",computerPl
 const scissorsBtn = document.querySelector("#scissors");
 scissorsBtn.addEventListener("click",() => console.log(playRound("scissors",computerPlay())));
 
-
-
+/* button animation */
 const btns = document.querySelectorAll("button");
-
-
 
 btns.forEach(btns => btns.addEventListener("click", () => btns.classList.add("clicked")));
 
@@ -21,9 +19,3 @@ function removeTransition(e){
 }
 
 btns.forEach(btns => btns.addEventListener("transitionend",removeTransition));
-
-
-
-btns.forEach(btns => btns.addEventListener("transitionend", removeTransition));
-
-
