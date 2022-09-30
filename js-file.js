@@ -8,19 +8,22 @@ const scissorsBtn = document.querySelector("#scissors");
 scissorsBtn.addEventListener("click",() => console.log(playRound("scissors",computerPlay())));
 
 
-scissorsBtn.setAttribute("name","cucumber");
 
-scissorsBtn.addEventListener("click",() => scissorsBtn.setAttribute("name","zuccini"));
-
-const content = scissorsBtn.getAttribute("name");
+const btns = document.querySelectorAll("button");
 
 
 
+btns.forEach(btns => btns.addEventListener("click", () => btns.classList.add("clicked")));
 
-const body = document.querySelector("body");
-const test = document.querySelector(".buttonContainer")
-const score = document.createElement("div");
-score.classList.add("score");
-score.textContent = "test";
-body.insertBefore(score,test);
-test.append(content);
+function removeTransition(e){
+    if (e.propertyName !== "transform") return;
+    this.classList.remove("clicked");
+}
+
+btns.forEach(btns => btns.addEventListener("transitionend",removeTransition));
+
+
+
+btns.forEach(btns => btns.addEventListener("transitionend", removeTransition));
+
+
