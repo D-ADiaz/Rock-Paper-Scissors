@@ -12,68 +12,16 @@
             <button id = "rock">Rock</button>
             <button id = "paper">Paper</button>
             <button id = "scissors">Scissors</button>
+
+            <p> 
+                Player Score:<span id ="playerDisplay" > 0 </span>
+                 <br>
+                Computer Score <span id ="computerDisplay"> 0 </span><br>
+                Round Result: <span id = "roundDisplay">  </span>
+                
+            </p>
         </div>
         
-
-        <script>
-
-            function computerPlay(){
-                const compChoice = ["rock","paper","scissors"];
-                const random = Math.floor(Math.random()*3);
-
-                return compChoice[random];
-            }
-            function playerPlay(){
-                //return prompt("Choose Rock, Paper, or Scissors", "").toLowerCase();
-            }
-
-            function playRound(playerSelection,computerSelection){
-
-                if(playerSelection === computerSelection){
-                    return "Tie";
-                }
-                else if(playerSelection === "rock" && computerSelection === "scissors"){ 
-                    return "Player wins!";
-                }
-                else if(playerSelection === "paper" && computerSelection === "rock"){
-                    return "Player wins!";
-                }
-                else if(playerSelection === "scissors" && computerSelection === "paper"){
-                    return "Player wins!";
-                }
-                else{
-                    return "Computer wins!";
-                }
-            };
-            
-        function game(){
-            let playerWins = 0;
-            let computerWins = 0;
-
-            
-
-                let roundResult = playRound(playerPlay(),computerPlay());
-                
-                if(roundResult === "Tie"){
-                    i--;
-                    console.log("Tie!");
-                    console.log("Computer wins: "+ computerWins + " Player wins: "+playerWins);
-                }
-                else if (roundResult === "Player wins!"){
-                    playerWins++;
-                    console.log("Player won!");
-                    console.log("Computer wins: "+ computerWins + " Player wins: "+playerWins);
-                }
-                else{
-                    computerWins++;
-                    console.log("Computer won!");
-                    console.log("Computer wins: "+ computerWins + " Player wins: "+playerWins);
-                    
-                }
-            
-        }
-        //game();
-        </script>
 
     </body>    
 </html>
